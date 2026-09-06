@@ -238,7 +238,7 @@ Finally, we implement intelligent resource lifecycle management through referenc
         // Locate reference count entry for this resource
         auto it = refCounts.find(resourceId);
         if (it != refCounts.end()) {
-            it->second--;
+            it->second.DecreaseRefCount();
 
             // Check if resource has no remaining references
             if (it->second <= 0) {
