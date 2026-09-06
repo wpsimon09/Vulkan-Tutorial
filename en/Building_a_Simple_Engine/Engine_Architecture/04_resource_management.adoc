@@ -70,7 +70,7 @@ Using handles instead of direct pointers provides several benefits:
 2. *Validation* - Handles can be checked for validity before use.
 3. *Automatic Resource Management* - The resource manager can track which resources are in use.
 
-Note, that if you are implementing `ResourceHandle` in a separate header file, make sure that the function definitions reside in the same file as the `ResourceManager` definitions. This prevents circular dependencies, since ResourceManager depends on ResourceHandle and vice versa. 
+Note, that if you are implementing `ResourceHandle` in a separate header file, make sure that the function definitions reside in the same file as the `ResourceManager` definitions. This prevents circular dependencies, since `ResourceManager` depends on `ResourceHandle` and vice versa. 
 
 === Basic Resource Manager
 
