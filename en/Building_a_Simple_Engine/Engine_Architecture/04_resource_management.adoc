@@ -218,7 +218,7 @@ After that, we provide the interface for safely accessing cached resources with 
     bool HasResource(const std::string& resourceId) {
         // Efficient existence check without resource access overhead
         auto resourceIt = resources.find(std::type_index(typeid(T)));
-        return resourceIt != resources.end();
+        return resourceIt->second.find(id) != resourceIt->second.end();    
     }
 ----
 
